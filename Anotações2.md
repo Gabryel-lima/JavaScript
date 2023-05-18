@@ -224,5 +224,3 @@ console.log('É possível alterar o nome do autor para ' + livros.alteraAutor())
 >
 > ---
 >
->
->
