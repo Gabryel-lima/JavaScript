@@ -122,7 +122,7 @@ Repare que a função consegue ser chamada antes mesmo de ter sido declarada. **
 
 A razão pela qual o código anterior funciona é que os mecanismos [JavaScript](https://www.alura.com.br/artigos/javascript) movem a função soma para o início do escopo, como ilustra o código abaixo:
 
-```
+```javascript
 function soma(a,b){
     return a + b
 }
@@ -131,14 +131,14 @@ console.log(soma(2,5))
 
 Entretanto, será que Hoisting funciona em outros tipos de código? Vamos conferir!
 
-```
+```javascript
 console.log(alura)
 var alura = ‘cursos’;
 ```
 
 Este código retorna:
 
-```
+```javascript
 undefined
 ```
 
@@ -146,7 +146,7 @@ A utilização de  **Hoisting em var não é indicada** , pois a variável criad
 
 O comportamento é parecido utilizando também var function:
 
-```
+```javascript
 function testaHoisting() {
     console.log(‘testaHoisting’, alura)
     var alura = ‘cursos’
@@ -157,14 +157,14 @@ Este código retorna: `undefined`.
 
  **Hoisting também não é indicado utilizando let** , pois acontece um outro tipo de **comportamento não desejado:**
 
-```
+```javascript
 console.log(alura)
 let alura = ‘cursos’;
 ```
 
 Este código retorna:
 
-```
+```javascript
 script.js:1 Uncaught ReferenceError: Cannot access 'alura' before initialization```
 ```
 
@@ -224,7 +224,7 @@ Cada item é um elemento, e cada elemento é acessado por um índice que começa
 
 Existem duas formas de declarar um array em Javascript, mas a mais comum delas é criando uma variável da seguinte forma:
 
-```
+```javascript
 var listaDeFrutas = ['Maçãs','Uvas','Bananas','Abacaxi','Morangos'];
 ```
 
@@ -234,7 +234,7 @@ Onde cada item da lista é separado por vírgulas e ocupa uma posição do array
 
 Podemos acessar elementos de um array buscando por seu índice da seguinte forma:
 
-```
+```Javascript
 var primeiroItem = listaDeFrutas[0]; // Pega o item 'Maçãs'
 var segundoItem = listaDeFrutas[1]; // Pega o item 'Uvas'
 var terceiroItem = listaDeFrutas[2]; // Pega o item 'Bananas'
@@ -242,7 +242,7 @@ var terceiroItem = listaDeFrutas[2]; // Pega o item 'Bananas'
 
 Outra forma de acessar os elementos de um array é iterando sobre ele, ou seja, percorrendo todos os elementos através de [estruturas de repetição](https://alura.com.br/curso-online-javascript-introducao) como `while`, `for`, e `forEach()`.
 
-```
+```Javascript
 listaDeFrutas.forEach(function (item, indice) {
   console.log(item, indice);
 });
@@ -263,7 +263,7 @@ Existem alguns [métodos](https://developer.mozilla.org/pt-BR/docs/Web/JavaScrip
 
 Podemos acessar o índice de um elemento com o `indexOf()` passando como parâmetro o elemento.
 
-```
+```Javascript
 var listaDeFrutas = ['Maçãs','Uvas','Bananas','Abacaxi','Morangos'];
 var pos = listaDeFrutas.indexOf('Bananas');
 //pos = 2
@@ -273,7 +273,7 @@ var pos = listaDeFrutas.indexOf('Bananas');
 
 Para adicionar um elemento ao final do array podemos usar o `push()`
 
-```
+```Javascript
 var listaDeFrutas = ['Maçãs','Uvas','Bananas','Abacaxi','Morangos'];
 listaDeFrutas.push('Laranjas');
 // ['Maçãs','Uvas','Bananas','Abacaxi','Morangos', 'Laranjas']
@@ -281,7 +281,7 @@ listaDeFrutas.push('Laranjas');
 
 Para adicionar um elemento no início do array podemos usar o `unshift()`
 
-```
+```Javascript
 var listaDeFrutas = ['Maçãs','Uvas','Bananas','Abacaxi','Morangos'];
 listaDeFrutas.unshift('Laranjas');
 // ['Laranjas','Maçãs','Uvas','Bananas','Abacaxi','Morangos]
@@ -293,7 +293,7 @@ Em ambos os métodos devemos **passar como parâmetro** o elemento que queremos 
 
 Para remover um elemento do início de um array podemos usar o `shift()`
 
-```
+```Javascript
 var listaDeFrutas = ['Maçãs','Uvas','Bananas','Abacaxi','Morangos'];
 listaDeFrutas.shift();
 // ['Uvas','Bananas','Abacaxi','Morangos']
@@ -301,7 +301,7 @@ listaDeFrutas.shift();
 
 Para remover um elemento do final de um array podemos usar o `pop()`
 
-```
+```Javascript
 var listaDeFrutas = ['Maçãs','Uvas','Bananas','Abacaxi','Morangos'];
 listaDeFrutas.pop();
 // ['Maçãs','Uvas','Bananas','Abacaxi']
@@ -311,7 +311,7 @@ Em ambos os métodos não é preciso passar o elemento como parâmetro.
 
 Podemos também remover um item a partir de seu índice com o método `splice()`
 
-```
+```Javascript
 var listaDeFrutas = ['Maçãs','Uvas','Bananas','Abacaxi','Morangos'];
 var pos = listaDeFrutas.indexOf('Abacaxi'); //pos = 3
 listaDeFrutas.splice(pos, 1)
@@ -327,8 +327,6 @@ Vimos o que são arrays, e que eles servem para  **armazenar** , **agrupar** e *
 Aqui na alura temos alguns cursos que te ajudam a entender os diferentes **tipos de variáveis** e como você pode guardar dados dentro delas.
 
 ---
-
-
 
 `Data-attributes` são utilizados para guardar valores em elementos HTML. Esses valores podem ser manipulados através do JavaScript. Também é possível estilizar elementos HTML com CSS referenciando o seu `data-attribute`. Essa funcionalidade é bem recente no mundo do desenvolvimento, sendo lançada na última versão do HTML(HTML5).
 
@@ -390,8 +388,6 @@ function mudaCores(elementos){
 ```
 
 ---
-
-
 
 ```javascript
 const lista = document.querySelector("ul");
