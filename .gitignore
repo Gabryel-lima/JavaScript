@@ -1,0 +1,11 @@
+# Ignorar a pasta node_modules
+node_modules/
+
+# Arquivos de log e saída de erros
+npm-debug.log
+yarn-error.log
+
+# Arquivos de build e cache
+/build/
+/dist/
+/.cache/
